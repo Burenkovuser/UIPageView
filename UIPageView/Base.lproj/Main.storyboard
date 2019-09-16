@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPageView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvD-cd-ADc">
+                                <rect key="frame" x="70.5" y="263" width="179.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51141117069999997" green="1" blue="0.85205565480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rvD-cd-ADc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="diW-Xo-EWT"/>
+                            <constraint firstItem="rvD-cd-ADc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="z7z-oj-mHs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="75" y="32.74647887323944"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="9Uh-pt-dCE">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="crossDissolve" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DFe-De-vWR" customClass="PageViewController" customModule="UIPageView" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ID8-ue-efJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="33"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="gpm-bT-f0r">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="4co-Xa-GIa" customClass="ContentViewController" customModule="UIPageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="brP-tz-YX1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Много текста" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-sG-K7t">
+                                <rect key="frame" x="16" y="55" width="288" height="30.5"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
+                                <color key="textColor" red="0.93232471446700504" green="0.031356099599756333" blue="0.16455355071882594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-vh-jNP">
+                                <rect key="frame" x="106" y="224" width="108" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mTd-gw-EbR">
+                                <rect key="frame" x="140.5" y="511" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51141117069999997" green="1" blue="0.85205565480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fwp-vh-jNP" firstAttribute="centerY" secondItem="brP-tz-YX1" secondAttribute="centerY" id="6e6-Gs-rHk"/>
+                            <constraint firstItem="mTd-gw-EbR" firstAttribute="centerX" secondItem="brP-tz-YX1" secondAttribute="centerX" id="B4e-Zx-STd"/>
+                            <constraint firstItem="Fwp-vh-jNP" firstAttribute="centerX" secondItem="brP-tz-YX1" secondAttribute="centerX" id="GnG-ew-0Ke"/>
+                            <constraint firstItem="YLX-Cq-W5f" firstAttribute="bottom" secondItem="mTd-gw-EbR" secondAttribute="bottom" constant="20" id="HkB-1a-L0f"/>
+                            <constraint firstItem="6g3-sG-K7t" firstAttribute="top" secondItem="YLX-Cq-W5f" secondAttribute="top" constant="35" id="fuA-KX-AN4"/>
+                            <constraint firstItem="6g3-sG-K7t" firstAttribute="leading" secondItem="YLX-Cq-W5f" secondAttribute="leading" constant="16" id="yzH-A1-IxG"/>
+                            <constraint firstItem="YLX-Cq-W5f" firstAttribute="trailing" secondItem="6g3-sG-K7t" secondAttribute="trailing" constant="16" id="zh0-W2-EH2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YLX-Cq-W5f"/>
+                    </view>
+                    <connections>
+                        <outlet property="emojiLabel" destination="Fwp-vh-jNP" id="GFt-YV-YGj"/>
+                        <outlet property="pageControl" destination="mTd-gw-EbR" id="nsy-3w-Z7f"/>
+                        <outlet property="presentTextLabel" destination="6g3-sG-K7t" id="3YM-0B-rKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="om9-BJ-D7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1485" y="32.74647887323944"/>
         </scene>
     </scenes>
 </document>
